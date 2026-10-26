@@ -4,16 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shita-kiri Suzume | Community Revival</title>
-  <meta name="description" content="Shita-kiri Suzume ($SUZUME) – Community-driven revival of the original Japanese folktale meme coin. 0% tax. Liquidity burned. Diamond hands only.">
+  <meta name="description" content="Shita-kiri Suzume ($SUZUME) – Community-driven revival of the original Japanese folktale meme coin.">
   <style>
     :root {
-      --bg: #0f0f0f;
-      --card: #1a1a1a;
-      --text: #f5f5f5;
-      --muted: #a0a0a0;
-      --accent: #c41e3a;      /* crimson */
-      --gold: #d4af37;
+      --bg: #0c0c0c;
+      --card: #161616;
+      --text: #f3f0ea;
+      --muted: #a89f94;
+      --accent: #c0392b;       /* deeper crimson */
+      --gold: #c9a227;
       --border: #2a2a2a;
+      --cream: #f5f0e6;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -28,16 +29,16 @@
 
     /* Header */
     header {
-      padding: 24px 0;
+      padding: 20px 0;
       border-bottom: 1px solid var(--border);
       position: sticky;
       top: 0;
-      background: rgba(15,15,15,0.95);
-      backdrop-filter: blur(10px);
+      background: rgba(12,12,12,0.92);
+      backdrop-filter: blur(12px);
       z-index: 100;
     }
     .header-inner { display: flex; justify-content: space-between; align-items: center; }
-    .logo { font-size: 1.4rem; font-weight: 700; letter-spacing: -0.5px; }
+    .logo { font-size: 1.35rem; font-weight: 700; letter-spacing: -0.5px; }
     .logo span { color: var(--accent); }
     nav a {
       color: var(--muted);
@@ -46,30 +47,31 @@
       font-size: 0.95rem;
       transition: color 0.2s;
     }
-    nav a:hover { color: var(--text); }
+    nav a:hover { color: var(--cream); }
 
     /* Hero */
     .hero {
-      padding: 100px 0 80px;
+      padding: 90px 0 70px;
       text-align: center;
+      background: radial-gradient(ellipse at top, #1a1212 0%, var(--bg) 70%);
     }
     .hero h1 {
-      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-size: clamp(2.5rem, 5.5vw, 3.9rem);
       font-weight: 800;
       line-height: 1.15;
-      margin-bottom: 20px;
-      letter-spacing: -1px;
+      margin-bottom: 18px;
+      letter-spacing: -1.2px;
     }
     .hero h1 span { color: var(--accent); }
     .hero p {
       font-size: 1.2rem;
       color: var(--muted);
       max-width: 620px;
-      margin: 0 auto 40px;
+      margin: 0 auto 36px;
     }
     .btn {
       display: inline-block;
-      padding: 14px 32px;
+      padding: 14px 30px;
       border-radius: 8px;
       font-weight: 600;
       text-decoration: none;
@@ -80,28 +82,39 @@
       background: var(--accent);
       color: white;
     }
-    .btn-primary:hover { background: #a31830; transform: translateY(-1px); }
+    .btn-primary:hover { background: #a93226; transform: translateY(-2px); }
     .btn-secondary {
       background: transparent;
       color: var(--text);
       border: 1px solid var(--border);
     }
-    .btn-secondary:hover { border-color: var(--muted); }
+    .btn-secondary:hover { border-color: var(--gold); color: var(--gold); }
 
     /* Sections */
     section { padding: 80px 0; }
     .section-title {
       font-size: 1.9rem;
       font-weight: 700;
-      margin-bottom: 16px;
+      margin-bottom: 12px;
       text-align: center;
     }
     .section-subtitle {
       text-align: center;
       color: var(--muted);
       max-width: 600px;
-      margin: 0 auto 50px;
+      margin: 0 auto 48px;
     }
+
+    /* Image styles */
+    .hero-image, .content-image {
+      width: 100%;
+      max-width: 700px;
+      border-radius: 16px;
+      margin: 30px auto;
+      display: block;
+      border: 1px solid var(--border);
+    }
+    .content-image { max-width: 500px; }
 
     /* Story cards */
     .story-grid {
@@ -114,9 +127,31 @@
       border: 1px solid var(--border);
       border-radius: 16px;
       padding: 32px;
+      transition: border-color 0.2s;
     }
+    .card:hover { border-color: var(--accent); }
     .card h3 { font-size: 1.25rem; margin-bottom: 12px; color: var(--gold); }
     .card p { color: var(--muted); font-size: 0.98rem; }
+
+    /* Video embeds */
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 */
+      height: 0;
+      overflow: hidden;
+      max-width: 800px;
+      margin: 0 auto 40px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+    }
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
 
     /* Token / Community */
     .info-box {
@@ -130,18 +165,19 @@
     }
     .contract {
       background: #111;
-      padding: 12px 20px;
+      padding: 14px 20px;
       border-radius: 8px;
       font-family: monospace;
       font-size: 0.9rem;
       word-break: break-all;
       margin: 20px 0;
       border: 1px solid var(--border);
+      color: var(--gold);
     }
 
     /* Shop teaser */
     .shop-teaser {
-      background: linear-gradient(135deg, #1a1a1a, #2a1215);
+      background: linear-gradient(135deg, #1a1212, #2a1518);
       border: 1px solid var(--border);
       border-radius: 20px;
       padding: 60px 40px;
@@ -157,7 +193,7 @@
       font-size: 0.9rem;
     }
     footer a { color: var(--muted); margin: 0 12px; text-decoration: none; }
-    footer a:hover { color: var(--text); }
+    footer a:hover { color: var(--cream); }
 
     @media (max-width: 700px) {
       nav { display: none; }
@@ -173,6 +209,7 @@
       <div class="logo">Shita<span>Kiri</span>Suzume</div>
       <nav>
         <a href="#story">Story</a>
+        <a href="#videos">Videos</a>
         <a href="#community">Community</a>
         <a href="#token">Token</a>
         <a href="#shop">Shop</a>
@@ -184,9 +221,13 @@
     <div class="container">
       <h1>The Sparrow Returns.<br><span>Community Revival</span></h1>
       <p>
-        Shita-kiri Suzume ($SUZUME) is being revived by the community.  
+        Shita-kiri Suzume ($SUZUME) is being revived by the community.<br>
         Same values. Same moral. Zero tax. Liquidity burned. Diamond hands only.
       </p>
+
+      <!-- Optional hero image - replace src with your image -->
+      <!-- <img src="images/hero-sparrow.jpg" alt="Shita-kiri Suzume" class="hero-image"> -->
+
       <div>
         <a href="#community" class="btn btn-primary">Join the Community</a>
         <a href="#shop" class="btn btn-secondary">Suzume Shop →</a>
@@ -200,6 +241,10 @@
       <p class="section-subtitle">
         Based on the classic Japanese folktale about kindness, greed, and consequences.
       </p>
+
+      <!-- Optional story image -->
+      <!-- <img src="images/story.jpg" alt="The Tongue-Cut Sparrow" class="content-image"> -->
+
       <div class="story-grid">
         <div class="card">
           <h3>Kindness Rewarded</h3>
@@ -213,6 +258,29 @@
           <h3>Our Philosophy</h3>
           <p>0% tax. Liquidity burned. No team wallets controlling the supply. Built for the community, not for extraction.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="videos">
+    <div class="container">
+      <h2 class="section-title">Videos</h2>
+      <p class="section-subtitle">Learn the story and the revival.</p>
+
+      <!-- Video 1 - Replace the src with your YouTube embed URL -->
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" 
+                title="Shita-kiri Suzume Story" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen></iframe>
+      </div>
+
+      <!-- Video 2 - Optional second video -->
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" 
+                title="Community Update" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen></iframe>
       </div>
     </div>
   </section>
@@ -268,7 +336,7 @@
   <footer>
     <div class="container">
       <p style="margin-bottom: 16px;">
-        Shita-kiri Suzume is a community-driven project.  
+        Shita-kiri Suzume is a community-driven project.<br>
         Nothing on this site constitutes financial advice.
       </p>
       <div>
