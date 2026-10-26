@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shita-kiri Suzume | Community Revival</title>
+  <meta name="description" content="Shita-kiri Suzume ($SUZUME) – Community-driven revival of the original Japanese folktale meme coin. 0% tax. Liquidity burned. Diamond hands only.">
+  <style>
+    :root {
+      --bg: #0f0f0f;
+      --card: #1a1a1a;
+      --text: #f5f5f5;
+      --muted: #a0a0a0;
+      --accent: #c41e3a;      /* crimson */
+      --gold: #d4af37;
+      --border: #2a2a2a;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+    /* Header */
+    header {
+      padding: 24px 0;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      background: rgba(15,15,15,0.95);
+      backdrop-filter: blur(10px);
+      z-index: 100;
+    }
+    .header-inner { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 1.4rem; font-weight: 700; letter-spacing: -0.5px; }
+    .logo span { color: var(--accent); }
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      margin-left: 28px;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+    nav a:hover { color: var(--text); }
+
+    /* Hero */
+    .hero {
+      padding: 100px 0 80px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      letter-spacing: -1px;
+    }
+    .hero h1 span { color: var(--accent); }
+    .hero p {
+      font-size: 1.2rem;
+      color: var(--muted);
+      max-width: 620px;
+      margin: 0 auto 40px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 14px 32px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s;
+      margin: 0 8px 12px;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: white;
+    }
+    .btn-primary:hover { background: #a31830; transform: translateY(-1px); }
+    .btn-secondary {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+    .btn-secondary:hover { border-color: var(--muted); }
+
+    /* Sections */
+    section { padding: 80px 0; }
+    .section-title {
+      font-size: 1.9rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+    .section-subtitle {
+      text-align: center;
+      color: var(--muted);
+      max-width: 600px;
+      margin: 0 auto 50px;
+    }
+
+    /* Story cards */
+    .story-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+    }
+    .card h3 { font-size: 1.25rem; margin-bottom: 12px; color: var(--gold); }
+    .card p { color: var(--muted); font-size: 0.98rem; }
+
+    /* Token / Community */
+    .info-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 40px;
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .contract {
+      background: #111;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-family: monospace;
+      font-size: 0.9rem;
+      word-break: break-all;
+      margin: 20px 0;
+      border: 1px solid var(--border);
+    }
+
+    /* Shop teaser */
+    .shop-teaser {
+      background: linear-gradient(135deg, #1a1a1a, #2a1215);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 60px 40px;
+      text-align: center;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 50px 0 30px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    footer a { color: var(--muted); margin: 0 12px; text-decoration: none; }
+    footer a:hover { color: var(--text); }
+
+    @media (max-width: 700px) {
+      nav { display: none; }
+      .hero { padding: 70px 0 50px; }
+      section { padding: 60px 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container header-inner">
+      <div class="logo">Shita<span>Kiri</span>Suzume</div>
+      <nav>
+        <a href="#story">Story</a>
+        <a href="#community">Community</a>
+        <a href="#token">Token</a>
+        <a href="#shop">Shop</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>The Sparrow Returns.<br><span>Community Revival</span></h1>
+      <p>
+        Shita-kiri Suzume ($SUZUME) is being revived by the community.  
+        Same values. Same moral. Zero tax. Liquidity burned. Diamond hands only.
+      </p>
+      <div>
+        <a href="#community" class="btn btn-primary">Join the Community</a>
+        <a href="#shop" class="btn btn-secondary">Suzume Shop →</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="story">
+    <div class="container">
+      <h2 class="section-title">The Original Story</h2>
+      <p class="section-subtitle">
+        Based on the classic Japanese folktale about kindness, greed, and consequences.
+      </p>
+      <div class="story-grid">
+        <div class="card">
+          <h3>Kindness Rewarded</h3>
+          <p>An old man cares for an injured sparrow. The bird later rewards him with a gift of true value.</p>
+        </div>
+        <div class="card">
+          <h3>Greed Punished</h3>
+          <p>His greedy wife demands more, ignores the warning, and suffers the consequences of her choices.</p>
+        </div>
+        <div class="card">
+          <h3>Our Philosophy</h3>
+          <p>0% tax. Liquidity burned. No team wallets controlling the supply. Built for the community, not for extraction.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="community">
+    <div class="container">
+      <h2 class="section-title">Community First</h2>
+      <p class="section-subtitle">
+        This revival is driven by the people who believed in the original vision.
+      </p>
+      <div class="info-box">
+        <p style="margin-bottom: 24px; color: var(--muted);">
+          Official channels will be updated here as the revival progresses.
+        </p>
+        <a href="#" class="btn btn-primary">Telegram</a>
+        <a href="#" class="btn btn-secondary">X / Twitter</a>
+        <a href="#" class="btn btn-secondary">Medium</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="token">
+    <div class="container">
+      <h2 class="section-title">Token Info</h2>
+      <div class="info-box">
+        <p style="color: var(--muted); margin-bottom: 8px;">Contract Address (Ethereum)</p>
+        <div class="contract">
+          0x0b452278223d3954f4ac050949d7998e373e7e43
+        </div>
+        <p style="font-size: 0.9rem; color: var(--muted);">
+          Always verify the contract on Etherscan. This is not financial advice.
+        </p>
+        <div style="margin-top: 28px;">
+          <a href="https://www.dextools.io/app/ether/pair-explorer/0x8340a818fe5b80441c4d96424ddf07867299b135" target="_blank" class="btn btn-secondary">Dextools</a>
+          <a href="https://app.uniswap.org/" target="_blank" class="btn btn-secondary">Uniswap</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="shop">
+    <div class="container">
+      <div class="shop-teaser">
+        <h2 class="section-title" style="margin-bottom: 12px;">Suzume Shop</h2>
+        <p class="section-subtitle" style="margin-bottom: 30px;">
+          Official merch is being prepared. A new, fully functional shop is coming soon.
+        </p>
+        <a href="#" class="btn btn-primary">Coming Soon</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p style="margin-bottom: 16px;">
+        Shita-kiri Suzume is a community-driven project.  
+        Nothing on this site constitutes financial advice.
+      </p>
+      <div>
+        <a href="#">Telegram</a>
+        <a href="#">X</a>
+        <a href="#">Medium</a>
+        <a href="#">Contract</a>
+      </div>
+      <p style="margin-top: 30px; font-size: 0.8rem;">
+        © 2026 Shita-kiri Suzume Community
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
