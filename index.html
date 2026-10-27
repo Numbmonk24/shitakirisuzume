@@ -134,7 +134,7 @@
     .card p { color: var(--muted); font-size: 0.98rem; }
 
     /* Video embeds */
-    .video-wrapper {<iframe width="956" height="538" src="https://www.youtube.com/embed/E0PHnSgBCZI" title="Shita-Kiri-Suzume: An Origin Story" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    .video-wrapper {
       position: relative;
       padding-bottom: 56.25%; /* 16:9 */
       height: 0;
@@ -144,7 +144,15 @@
       border-radius: 16px;
       border: 1px solid var(--border);
     }
-    .video-wrapper iframe {
+    .video-wrapper iframe {<iframe width="956" 
+                           height="538" 
+                           src="https://www.youtube.com/embed/E0PHnSgBCZI" 
+                           title="Shita-Kiri-Suzume: An Origin Story" 
+                           frameborder="0" 
+                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                           referrerpolicy="strict-origin-when-cross-origin" 
+                           allowfullscreen>
+                           </iframe>
       position: absolute;
       top: 0;
       left: 0;
