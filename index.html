@@ -67,25 +67,52 @@ body::before {
     nav a:hover { color: var(--cream); }
 
     /* Hero */
-    .hero {
-      padding: 90px 0 70px;
-      text-align: center;
-      background: radial-gradient(ellipse at top, #0d2438 0%, var(--bg) 70%);
-    }
-    .hero h1 {
-      font-size: clamp(2.5rem, 5.5vw, 3.9rem);
-      font-weight: 800;
-      line-height: 1.15;
-      margin-bottom: 18px;
-      letter-spacing: -1.2px;
-    }
-    .hero h1 span { color: var(--accent); }
-    .hero p {
-      font-size: 1.2rem;
-      color: var(--muted);
-      max-width: 620px;
-      margin: 0 auto 36px;
-    }
+.hero {
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 20px;
+  background-image: url('Images/hero-torii-sparrow.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+/* Dark overlay so the text stays readable */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(7, 17, 31, 0.62);
+  z-index: 1;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.hero h1 {
+  font-size: clamp(2.4rem, 5.5vw, 3.6rem);
+  margin-bottom: 20px;
+  line-height: 1.2;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.6);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #e8f0f5;
+  margin-bottom: 36px;
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.5);
+}
     .btn {
       display: inline-block;
       padding: 14px 30px;
@@ -253,8 +280,6 @@ body::before {
 
   <section class="hero">
   <div class="container">
-    <img src="Images/hero-torii-sparrow.jpg" alt="Shita-kiri Suzume flying through the red torii gate" class="hero-image">
-    
     <h1>The Sparrow Returns</h1>
     <p>
       While our leader works quietly in the background, the community has stepped forward to support KOBA in the ongoing fight for true decentralization.
@@ -264,7 +289,6 @@ body::before {
       <a href="https://t.me/ShitaKiriSuzume" class="btn btn-primary" target="_blank">Join the Community</a>
       <a href="#shop" class="btn btn-secondary">Suzume Shop →</a>
     </div>
-  </div>
 </section>
   <section id="story">
     <div class="container">
