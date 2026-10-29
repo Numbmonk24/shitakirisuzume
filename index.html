@@ -186,7 +186,7 @@
       text-shadow: 0 2px 12px rgba(0,0,0,0.5);
     }
 
-    /* ===== BUTTONS (Parchment style) ===== */
+    /* ===== BUTTONS (Fixed text color) ===== */
     .btn {
       display: inline-block;
       padding: 13px 28px;
@@ -202,7 +202,7 @@
 
     .btn-primary {
       background: linear-gradient(to bottom, #f5e8c7, #e8d5a3);
-      color: #3a2a1a;
+      color: #3a2a1a !important;
       border: 2px solid #8b5a2b;
       box-shadow: 0 3px 0 #8b5a2b;
     }
@@ -211,18 +211,19 @@
       background: linear-gradient(to bottom, #fff3d6, #f5e8c7);
       transform: translateY(-2px);
       box-shadow: 0 5px 0 #8b5a2b;
+      color: #3a2a1a !important;
     }
 
     .btn-secondary {
       background: transparent;
-      color: #f5e8c7;
-      border: 2px solid #c9a87c;
+      color: #3a2a1a !important;
+      border: 2px solid #8b5a2b;
     }
 
     .btn-secondary:hover {
-      background: rgba(245, 232, 199, 0.12);
-      color: #fff;
-      border-color: #f5e8c7;
+      background: rgba(139, 90, 43, 0.12);
+      color: #8b1a1a !important;
+      border-color: #8b1a1a;
     }
 
     /* ===== SECTIONS ===== */
@@ -245,7 +246,7 @@
       margin: 0 auto 48px;
     }
 
-    /* ===== CARDS & BOXES (Parchment style) ===== */
+    /* ===== CARDS & BOXES ===== */
     .card, .info-box, .shop-teaser {
       background: linear-gradient(to bottom, #f5e8c7 0%, #e8d5a3 100%);
       border: 2px solid #8b5a2b;
@@ -313,14 +314,12 @@
       color: #5a4a3a;
     }
 
-    /* Story grid */
     .story-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 24px;
     }
 
-    /* Video embeds */
     .video-wrapper {
       position: relative;
       padding-bottom: 56.25%;
@@ -342,7 +341,6 @@
       border: 0;
     }
 
-    /* Footer */
     footer {
       border-top: 1px solid var(--border);
       padding: 50px 0 30px;
