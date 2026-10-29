@@ -3,234 +3,241 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shita-kiri Suzume | Community Revival</title>
-  <meta name="description" content="Shita-kiri Suzume ($SUZUME) – Community-driven revival of the original Japanese folktale meme coin.">
+  <title>Shita-kiri Suzume</title>
+  <meta name="description" content="Shita-kiri Suzume ($SUZUME) – Supporting KOBA in the fight for true decentralization.">
   <style>
     :root {
-      --bg: #07111f;          /* deep midnight indigo */
-      --card: #0f1c2e;        /* soft dark blue */
-      --text: #e8f0f5;        /* soft off-white */
-      --muted: #8ba3b8;       /* muted blue-gray */
-      --accent: #2dd4a8;      /* fresh emerald teal */
+      --bg: #07111f;
+      --card: #0f1c2e;
+      --text: #e8f0f5;
+      --muted: #8ba3b8;
+      --accent: #2dd4a8;
       --accent-dark: #1fa88a;
-      --gold: #7dd3c0;        /* soft seafoam (replaces gold) */
+      --gold: #7dd3c0;
       --border: #1a2d45;
       --cream: #d4e8f0;
+
+      /* Parchment colors */
+      --parchment: #f5e8c7;
+      --parchment-dark: #e8d5a3;
+      --ink: #3a2a1a;
+      --ink-red: #8b1a1a;
+      --scroll-border: #8b5a2b;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
-   body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  background-color: #07111f;
-  background-image: url('Images/waterfall-bg.jpg');
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  color: var(--text);
-  line-height: 1.65;
-  min-height: 100vh;
-}
 
-/* Soft dark overlay so text stays readable */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: rgba(7, 17, 31, 0.55);
-  z-index: -1;
-  pointer-events: none;
-}
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #07111f;
+      background-image: url('Images/waterfall-bg.jpg');
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: var(--text);
+      line-height: 1.65;
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: rgba(7, 17, 31, 0.55);
+      z-index: -1;
+      pointer-events: none;
+    }
 
     .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
-    /* ===== SCROLL-STYLE HEADER WITH ROLLED EDGES ===== */
-header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: linear-gradient(to bottom, #f5e8c7 0%, #e8d5a3 100%);
-  border-bottom: 3px solid #8b5a2b;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
-  padding: 14px 0;
-  /* subtle parchment texture */
-  background-image: 
-    linear-gradient(to bottom, #f5e8c7 0%, #e8d5a3 100%),
-    url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
-}
+    /* ===== SCROLL-STYLE HEADER ===== */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: linear-gradient(to bottom, #f5e8c7 0%, #e8d5a3 100%);
+      border-bottom: 3px solid #8b5a2b;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+      padding: 14px 0;
+      background-image: 
+        linear-gradient(to bottom, #f5e8c7 0%, #e8d5a3 100%),
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+    }
 
-/* Rolled paper edges on left and right */
-header::before,
-header::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 28px;
-  background: linear-gradient(to bottom, #f5e8c7 0%, #e8d5a3 100%);
-  box-shadow: inset 0 0 12px rgba(0,0,0,0.15);
-  z-index: 1;
-}
+    header::before,
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 28px;
+      z-index: 1;
+    }
 
-/* Left rolled edge */
-header::before {
-  left: 0;
-  border-right: 2px solid #c9a87c;
-  border-radius: 0 8px 8px 0;
-  background: 
-    linear-gradient(to right, #d4b78a 0%, #f5e8c7 70%),
-    linear-gradient(to bottom, #f5e8c7 0%, #e8d5a3 100%);
-}
+    header::before {
+      left: 0;
+      border-right: 2px solid #c9a87c;
+      border-radius: 0 8px 8px 0;
+      background: linear-gradient(to right, #d4b78a 0%, #f5e8c7 70%);
+    }
 
-/* Right rolled edge */
-header::after {
-  right: 0;
-  border-left: 2px solid #c9a87c;
-  border-radius: 8px 0 0 8px;
-  background: 
-    linear-gradient(to left, #d4b78a 0%, #f5e8c7 70%),
-    linear-gradient(to bottom, #f5e8c7 0%, #e8d5a3 100%);
-}
+    header::after {
+      right: 0;
+      border-left: 2px solid #c9a87c;
+      border-radius: 8px 0 0 8px;
+      background: linear-gradient(to left, #d4b78a 0%, #f5e8c7 70%);
+    }
 
-.header-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 40px; /* extra padding so content doesn't sit under the rolls */
-  position: relative;
-  z-index: 2;
-}
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 40px;
+      position: relative;
+      z-index: 2;
+    }
 
-/* Logo - old ink cursive */
-.logo {
-  font-family: 'Georgia', 'Times New Roman', serif;
-  font-size: 1.55rem;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  color: #3a2a1a;
-  text-shadow: 1px 1px 0 rgba(255,255,255,0.4);
-  font-style: italic;
-}
+    .logo {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 1.55rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      color: #3a2a1a;
+      text-shadow: 1px 1px 0 rgba(255,255,255,0.4);
+      font-style: italic;
+    }
 
-.logo span {
-  color: #8b1a1a;
-}
+    .logo span { color: #8b1a1a; }
 
-/* Navigation links - elegant cursive */
-nav a {
-  font-family: 'Georgia', 'Times New Roman', serif;
-  font-style: italic;
-  color: #3a2a1a;
-  text-decoration: none;
-  margin-left: 28px;
-  font-size: 1.05rem;
-  font-weight: 500;
-  transition: all 0.25s ease;
-  position: relative;
-}
+    nav a {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-style: italic;
+      color: #3a2a1a;
+      text-decoration: none;
+      margin-left: 28px;
+      font-size: 1.05rem;
+      font-weight: 500;
+      transition: all 0.25s ease;
+      position: relative;
+    }
 
-nav a:hover {
-  color: #8b1a1a;
-}
+    nav a:hover { color: #8b1a1a; }
 
-nav a::after {
-  content: '';
-  position: absolute;
-  bottom: -3px;
-  left: 0;
-  width: 0;
-  height: 1.5px;
-  background: #8b1a1a;
-  transition: width 0.3s ease;
-}
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 0;
+      height: 1.5px;
+      background: #8b1a1a;
+      transition: width 0.3s ease;
+    }
 
-nav a:hover::after {
-  width: 100%;
-}
-    /* Hero */
-.hero {
-  position: relative;
-  min-height: 85vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 80px 20px;
-  background-image: url('Images/hero-torii-sparrow.jpg');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  overflow: hidden;
-}
+    nav a:hover::after { width: 100%; }
 
-/* Dark overlay so the text stays readable */
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(7, 17, 31, 0.62);
-  z-index: 1;
-}
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 20px;
+      background-image: url('Images/hero-torii-sparrow.jpg');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      overflow: hidden;
+    }
 
-.hero .container {
-  position: relative;
-  z-index: 2;
-  max-width: 800px;
-}
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(7, 17, 31, 0.62);
+      z-index: 1;
+    }
 
-.hero h1 {
-  font-size: clamp(2.4rem, 5.5vw, 3.6rem);
-  margin-bottom: 20px;
-  line-height: 1.2;
-  text-shadow: 0 4px 20px rgba(0,0,0,0.6);
-}
+    .hero .container {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+    }
 
-.hero p {
-  font-size: 1.2rem;
-  color: #e8f0f5;
-  margin-bottom: 36px;
-  max-width: 620px;
-  margin-left: auto;
-  margin-right: auto;
-  text-shadow: 0 2px 12px rgba(0,0,0,0.5);
-}
+    .hero h1 {
+      font-size: clamp(2.4rem, 5.5vw, 3.6rem);
+      margin-bottom: 20px;
+      line-height: 1.2;
+      text-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #e8f0f5;
+      margin-bottom: 36px;
+      max-width: 620px;
+      margin-left: auto;
+      margin-right: auto;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.5);
+    }
+
+    /* ===== BUTTONS (Parchment style) ===== */
     .btn {
       display: inline-block;
-      padding: 14px 30px;
-      border-radius: 8px;
+      padding: 13px 28px;
+      border-radius: 6px;
       font-weight: 600;
       text-decoration: none;
-      transition: all 0.2s;
+      transition: all 0.25s ease;
       margin: 0 8px 12px;
-    }
-    .btn-primary {
-      background: var(--accent);
-      color: #04120f;
-    }
-    .btn-primary:hover { 
-      background: var(--accent-dark); 
-      transform: translateY(-2px); 
-    }
-    .btn-secondary {
-      background: transparent;
-      color: var(--text);
-      border: 1px solid var(--border);
-    }
-    .btn-secondary:hover { 
-      border-color: var(--gold); 
-      color: var(--gold); 
+      font-family: Georgia, 'Times New Roman', serif;
+      font-style: italic;
+      letter-spacing: 0.3px;
     }
 
-    /* Sections */
+    .btn-primary {
+      background: linear-gradient(to bottom, #f5e8c7, #e8d5a3);
+      color: #3a2a1a;
+      border: 2px solid #8b5a2b;
+      box-shadow: 0 3px 0 #8b5a2b;
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(to bottom, #fff3d6, #f5e8c7);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 0 #8b5a2b;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: #f5e8c7;
+      border: 2px solid #c9a87c;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(245, 232, 199, 0.12);
+      color: #fff;
+      border-color: #f5e8c7;
+    }
+
+    /* ===== SECTIONS ===== */
     section { padding: 80px 0; }
+
     .section-title {
       font-size: 1.9rem;
       font-weight: 700;
       margin-bottom: 12px;
       text-align: center;
+      font-family: Georgia, 'Times New Roman', serif;
+      font-style: italic;
+      color: #f5e8c7;
     }
+
     .section-subtitle {
       text-align: center;
       color: var(--muted);
@@ -238,52 +245,94 @@ nav a:hover::after {
       margin: 0 auto 48px;
     }
 
-    /* Image styles */
-    .hero-image, .content-image {
-      width: 100%;
-      max-width: 700px;
-      border-radius: 16px;
-      margin: 30px auto;
-      display: block;
-      border: 1px solid var(--border);
+    /* ===== CARDS & BOXES (Parchment style) ===== */
+    .card, .info-box, .shop-teaser {
+      background: linear-gradient(to bottom, #f5e8c7 0%, #e8d5a3 100%);
+      border: 2px solid #8b5a2b;
+      border-radius: 12px;
+      color: #3a2a1a;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
     }
-    .content-image { max-width: 500px; }
 
-    /* Story cards */
+    .card {
+      padding: 32px;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.3);
+    }
+
+    .card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 12px;
+      color: #8b1a1a;
+      font-family: Georgia, serif;
+      font-style: italic;
+    }
+
+    .card p {
+      color: #4a3a2a;
+      font-size: 0.98rem;
+    }
+
+    .info-box {
+      padding: 40px;
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .info-box p {
+      color: #4a3a2a;
+    }
+
+    .contract {
+      background: #f8f0d8;
+      padding: 14px 20px;
+      border-radius: 8px;
+      font-family: monospace;
+      font-size: 0.9rem;
+      word-break: break-all;
+      margin: 20px 0;
+      border: 1px solid #c9a87c;
+      color: #5a3a1a;
+    }
+
+    .shop-teaser {
+      padding: 60px 40px;
+      text-align: center;
+    }
+
+    .shop-teaser .section-title {
+      color: #3a2a1a;
+    }
+
+    .shop-teaser .section-subtitle {
+      color: #5a4a3a;
+    }
+
+    /* Story grid */
     .story-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 24px;
     }
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 32px;
-      transition: border-color 0.25s, transform 0.25s;
-    }
-    .card:hover { 
-      border-color: var(--accent); 
-      transform: translateY(-3px);
-    }
-    .card h3 { 
-      font-size: 1.25rem; 
-      margin-bottom: 12px; 
-      color: var(--gold); 
-    }
-    .card p { color: var(--muted); font-size: 0.98rem; }
 
     /* Video embeds */
     .video-wrapper {
       position: relative;
-      padding-bottom: 56.25%; /* 16:9 */
+      padding-bottom: 56.25%;
       height: 0;
       overflow: hidden;
       max-width: 800px;
       margin: 0 auto 40px;
-      border-radius: 16px;
-      border: 1px solid var(--border);
+      border-radius: 12px;
+      border: 2px solid #8b5a2b;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
     }
+
     .video-wrapper iframe {
       position: absolute;
       top: 0;
@@ -291,37 +340,6 @@ nav a:hover::after {
       width: 100%;
       height: 100%;
       border: 0;
-    }
-
-    /* Token / Community */
-    .info-box {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 40px;
-      text-align: center;
-      max-width: 700px;
-      margin: 0 auto;
-    }
-    .contract {
-      background: #081420;
-      padding: 14px 20px;
-      border-radius: 8px;
-      font-family: monospace;
-      font-size: 0.9rem;
-      word-break: break-all;
-      margin: 20px 0;
-      border: 1px solid var(--border);
-      color: var(--gold);
-    }
-
-    /* Shop teaser */
-    .shop-teaser {
-      background: linear-gradient(135deg, #0c1f2e, #0f2a28);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 60px 40px;
-      text-align: center;
     }
 
     /* Footer */
@@ -332,17 +350,20 @@ nav a:hover::after {
       color: var(--muted);
       font-size: 0.9rem;
     }
-    footer a { 
-      color: var(--muted); 
-      margin: 0 12px; 
-      text-decoration: none; 
+
+    footer a {
+      color: var(--muted);
+      margin: 0 12px;
+      text-decoration: none;
     }
-    footer a:hover { color: var(--cream); }
+
+    footer a:hover { color: #f5e8c7; }
 
     @media (max-width: 700px) {
       nav { display: none; }
       .hero { padding: 70px 0 50px; }
       section { padding: 60px 0; }
+      .header-inner { padding: 0 20px; }
     }
   </style>
 </head>
@@ -362,26 +383,24 @@ nav a:hover::after {
   </header>
 
   <section class="hero">
-  <div class="container">
-    <h1>The Sparrow Returns</h1>
-    <p>
-      While our leader works quietly in the background, the community has stepped forward to support KOBA in the ongoing fight for true decentralization.
-    </p>
-
-    <div>
-      <a href="https://t.me/ShitaKiriSuzume" class="btn btn-primary" target="_blank">Join the Community</a>
-      <a href="#shop" class="btn btn-secondary">Suzume Shop →</a>
+    <div class="container">
+      <h1>The Sparrow Returns</h1>
+      <p>
+        While our leader works quietly in the background, the community has stepped forward to support KOBA in the ongoing fight for true decentralization.
+      </p>
+      <div>
+        <a href="https://t.me/ShitaKiriSuzume" class="btn btn-primary" target="_blank">Join the Community</a>
+        <a href="#shop" class="btn btn-secondary">Suzume Shop →</a>
+      </div>
     </div>
-</section>
+  </section>
+
   <section id="story">
     <div class="container">
       <h2 class="section-title">The Original Story</h2>
       <p class="section-subtitle">
         Based on the classic Japanese folktale about kindness, greed, and consequences.
       </p>
-
-      <!-- Optional story image -->
-      <!-- <img src="images/story.jpg" alt="The Tongue-Cut Sparrow" class="content-image"> -->
 
       <div class="story-grid">
         <div class="card">
@@ -394,54 +413,45 @@ nav a:hover::after {
         </div>
         <div class="card">
           <h3>Our Philosophy</h3>
-          <p>0% tax. Liquidity burned. No team wallets controlling the supply. Built for the community, not for extraction.</p>
+          <p>0% tax. Liquidity burned. No team wallets controlling the supply. Built for true decentralization.</p>
         </div>
       </div>
     </div>
   </section>
 
-<section id="videos">
-  <div class="container">
-    <h2 class="section-title">Videos</h2>
-    <p class="section-subtitle">Learn the story and the revival.</p>
+  <section id="videos">
+    <div class="container">
+      <h2 class="section-title">Videos</h2>
+      <p class="section-subtitle">Learn the story and the revival.</p>
 
-    <!-- Video 1 - YouTube -->
-    <div class="video-wrapper">
-      <iframe width="956" 
-              height="538" 
-              src="https://www.youtube.com/embed/E0PHnSgBCZI" 
-              title="Shita-Kiri-Suzume: An Origin Story" 
-              frameborder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-              referrerpolicy="strict-origin-when-cross-origin" 
-              allowfullscreen> 
-      </iframe>
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/E0PHnSgBCZI" 
+                title="Shita-Kiri-Suzume: An Origin Story" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+        </iframe>
+      </div>
+
+      <div class="video-wrapper">
+        <iframe src="https://player.vimeo.com/video/790485662?title=0&byline=0&portrait=0" 
+                frameborder="0" 
+                allow="autoplay; fullscreen; picture-in-picture" 
+                allowfullscreen>
+        </iframe>
+      </div>
     </div>
-
-    <!-- Video 2 - Vimeo -->
-    <div class="video-wrapper">
-      <iframe 
-        src="https://player.vimeo.com/video/790485662?title=0&byline=0&portrait=0" 
-        width="100%" 
-        height="100%" 
-        frameborder="0" 
-        allow="autoplay; fullscreen; picture-in-picture" 
-        allowfullscreen>
-      </iframe>
-    </div>
-
-  </div>
-</section>
+  </section>
 
   <section id="community">
     <div class="container">
-      <h2 class="section-title">Community First</h2>
+      <h2 class="section-title">Community</h2>
       <p class="section-subtitle">
-        This revival is driven by the people who believed in the original vision.
+        Supporting KOBA while he works in the background.
       </p>
       <div class="info-box">
-        <p style="margin-bottom: 24px; color: var(--muted);">
-          Official channels will be updated here as the revival progresses.
+        <p style="margin-bottom: 24px;">
+          Official channels for those standing with the sparrow.
         </p>
         <a href="https://t.me/ShitaKiriSuzume" class="btn btn-primary" target="_blank">Telegram</a>
         <a href="https://x.com/s_shitakiri" class="btn btn-secondary" target="_blank">X / Twitter</a>
@@ -454,11 +464,11 @@ nav a:hover::after {
     <div class="container">
       <h2 class="section-title">Token Info</h2>
       <div class="info-box">
-        <p style="color: var(--muted); margin-bottom: 8px;">Contract Address (Ethereum)</p>
+        <p style="margin-bottom: 8px;">Contract Address (Ethereum)</p>
         <div class="contract">
           0x0b452278223d3954f4ac050949d7998e373e7e43
         </div>
-        <p style="font-size: 0.9rem; color: var(--muted);">
+        <p style="font-size: 0.9rem;">
           Always verify the contract on Etherscan. This is not financial advice.
         </p>
         <div style="margin-top: 28px;">
@@ -484,7 +494,7 @@ nav a:hover::after {
   <footer>
     <div class="container">
       <p style="margin-bottom: 16px;">
-        Shita-kiri Suzume is a community-driven project.<br>
+        Shita-kiri Suzume stands with KOBA.<br>
         Nothing on this site constitutes financial advice.
       </p>
       <div>
@@ -494,7 +504,7 @@ nav a:hover::after {
         <a href="https://www.dextools.io/app/ether/pair-explorer/0x8340a818fe5b80441c4d96424ddf07867299b135" target="_blank">Contract</a>
       </div>
       <p style="margin-top: 30px; font-size: 0.8rem;">
-        © 2026 Shita-kiri Suzume Community
+        © 2026 Shita-kiri Suzume
       </p>
     </div>
   </footer>
